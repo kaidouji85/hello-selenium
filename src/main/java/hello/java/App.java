@@ -3,12 +3,22 @@
  */
 package hello.java;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class App {
     public String getGreeting() {
         return "Hello module world.";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        WebDriver webDriver = new ChromeDriver();
+        webDriver.get("https://www.google.com");
+
+        WebElement element = webDriver.findElement(By.name("q"));
+        element.sendKeys("こんにちは、世界");
+        element.sendKeys("\n");
     }
 }
