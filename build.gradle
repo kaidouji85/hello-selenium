@@ -23,7 +23,6 @@ repositories {
 dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.2.2'
-    testImplementation 'junit:junit:4.13'
 }
 
 application {
